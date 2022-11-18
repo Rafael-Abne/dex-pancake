@@ -6,6 +6,7 @@ sftp-config.json
 # dependencies
 /node_modules
 /pancake-uikit/node_modules
+/pancake-uikit/pancake-uikit/node_modules
 
 # testing
 /coverage
