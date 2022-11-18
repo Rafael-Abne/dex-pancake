@@ -22,9 +22,9 @@ const config: MenuEntry[] = [
     ],
   },
   {
-    label: 'Buy via PIX',
+    label: 'Liquidante BRL',
     icon: 'IfoIcon',
-    href: 'https://light.xchange.ee/',
+    href: '',
   }
 ]
 
