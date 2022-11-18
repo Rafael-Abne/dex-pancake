@@ -7,8 +7,6 @@ import { BscConnector } from '@binance-chain/bsc-connector'
 import { NetworkConnector } from './NetworkConnector'
 import Web3 from 'web3'
 
-const web3 = new Web3(new Web3.providers.HttpProvider(process.env.RPC ?? 'https://bsc-dataseed1.binance.org:443'));
-console.log(web3)
 
 const NETWORK_URL = process.env.REACT_APP_NETWORK_URL
 
@@ -21,8 +19,6 @@ if (typeof NETWORK_URL === 'undefined') {
 export const network = new NetworkConnector({
   urls: { [NETWORK_CHAIN_ID]: NETWORK_URL },
 })
-
-console.log(network)
 
 let networkLibrary: Web3Provider | undefined
 export function getNetworkLibrary(): Web3Provider {
