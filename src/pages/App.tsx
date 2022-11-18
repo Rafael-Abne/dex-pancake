@@ -46,7 +46,7 @@ const BodyWrapper = styled.div`
     background-size: auto;
   }
 
-  ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.xs} {
     /* background-image: url('/images/arch-${({ theme }) => (theme.isDark ? 'dark' : 'dark')}.svg'),
       url('/images/imagem_esquerda.svg'), url('/images/imagem_direita.svg'); */
     background-image: linear-gradient(
@@ -54,8 +54,7 @@ const BodyWrapper = styled.div`
     ),
     url('/images/fundo.jpg');
     background-repeat: repeat;
-    background-size: contain, 866px, 566px;
-    min-height: 90vh;
+    background-size: COVER, 866px, 566px;
   }
 `
 
