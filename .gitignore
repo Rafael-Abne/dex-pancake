@@ -11,8 +11,6 @@ sftp-config.json
 # testing
 /coverage
 
-/dex-mimos.rar
-
 # production
 /build
 
