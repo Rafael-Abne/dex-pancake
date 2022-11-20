@@ -31,8 +31,8 @@ const Menu: React.FC = (props) => {
   const [priceToken, setPriceToken] = useState(0);
 
   const getPriceToken = async () => {
-    const pathPcs = ['0x9ceBCBF0677a21f32b41eFaac2Db558aa8682686','0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','0xe9e7cea3dedca5984780bafc599bd69add087d56']
-    const price = await PancakeRouterContract.methods.getAmountsOut(100000000, pathPcs).call()
+    const pathPcs = ['0x9E354B618d472b76cE35a4ab76916B4B51355428','0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','0xe9e7cea3dedca5984780bafc599bd69add087d56']
+    const price = await PancakeRouterContract.methods.getAmountsOut('1000000000000000000', pathPcs).call()
     setPriceToken(price[2]/10**18)
   }
 

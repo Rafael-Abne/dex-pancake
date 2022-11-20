@@ -11,7 +11,7 @@ const swapChainId = ChainId.MAINNET;
 
 export const BUSD = new Token(swapChainId, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD');
 export const WBNB = new Token(swapChainId, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB');
-export const MMC = new Token(swapChainId, '0x9ceBCBF0677a21f32b41eFaac2Db558aa8682686', 8, 'MMC', 'Mimos Coin');
+export const MMC = new Token(swapChainId, '0x9e354b618d472b76ce35a4ab76916b4b51355428', 18, 'MMC', 'Mimos Coin');
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],

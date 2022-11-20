@@ -27,14 +27,13 @@
       "decimals": 18,
       "logoURI": "https://bscscan.com/token/images/busd_32.png"
     },
-
-
+    
     {
       "name": "Mimos Coin",
       "symbol": "MMC",
-      "address": "0x9ceBCBF0677a21f32b41eFaac2Db558aa8682686",
+      "address": "0x9E354B618d472b76cE35a4ab76916B4B51355428",
       "chainId": 56,
-      "decimals": 8,
+      "decimals": 18,
       "logoURI": "https://static.wixstatic.com/media/296764_51bd7f658ad745c8b9ba946bf794b84b~mv2.png/v1/fill/w_43,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/22222.png"
     }
   ]
