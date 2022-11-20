@@ -1,30 +1,17 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '../sdk'
 
-export const ROUTER_ADDRESS = '0xD99D1c33F9fC3444f8101754aBC46c52416550D1'
+export const ROUTER_ADDRESS = '0x10ED43C718714eb63d5aA57B78B54704E256024E'
 
 // a list of tokens by chain
 type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
-export const BUSD = new Token(ChainId.MAINNET, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD')
-export const BTCB = new Token(ChainId.MAINNET, '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18, 'BTCB', 'Binance BTC')
-export const USDT = new Token(ChainId.MAINNET, '0x55d398326f99059fF775485246999027B3197955', 18, 'USDT', 'Tether USD')
-export const UST = new Token(
-  ChainId.MAINNET,
-  '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
-  18,
-  'UST',
-  'Wrapped UST Token'
-)
-export const ETH = new Token(
-  ChainId.MAINNET,
-  '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
-  18,
-  'ETH',
-  'Binance-Peg Ethereum Token'
-)
+const swapChainId = ChainId.MAINNET;
+
+export const BUSD = new Token(swapChainId, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD');
+export const WBNB = new Token(swapChainId, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB');
+export const MMC = new Token(swapChainId, '0x9ceBCBF0677a21f32b41eFaac2Db558aa8682686', 8, 'MMC', 'Mimos Coin');
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -34,7 +21,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, BTCB, USDT, UST, ETH],
+  [swapChainId]: [...WETH_ONLY[swapChainId], BUSD],
 }
 
 /**
@@ -42,29 +29,26 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  * tokens.
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
-  [ChainId.MAINNET]: {},
+  [swapChainId]: {},
 }
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, USDT],
+  [swapChainId]: [...WETH_ONLY[swapChainId], BUSD],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, BTCB, USDT],
+  [swapChainId]: [...WETH_ONLY[swapChainId], BUSD],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-  [ChainId.MAINNET]: [
-    [
-      new Token(ChainId.MAINNET, '0x53dedd08f5f1c6071da33a49e8f5d4ee81d16bca', 18, 'CHND-LP', 'LightDefi LPs'),
-      new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
-    ],
-    [BUSD, USDT],
-    [DAI, USDT],
+  [swapChainId]: [
+    [ BUSD, WBNB ],
+    [ WBNB, MMC ],
+    [ BUSD, MMC ],
   ],
 }
 

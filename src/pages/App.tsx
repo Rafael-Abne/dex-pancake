@@ -46,13 +46,15 @@ const BodyWrapper = styled.div`
     background-size: auto;
   }
 
-  ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/arch-${({ theme }) => (theme.isDark ? 'dark' : 'dark')}.svg'),
-      url('/images/imagem_esquerda.svg'), url('/images/imagem_direita.svg');
-    background-repeat: no-repeat;
-    background-position: center 420px, 10% 230px, 90% 230px;
-    background-size: contain, 266px, 266px;
-    min-height: 90vh;
+  ${({ theme }) => theme.mediaQueries.xs} {
+    /* background-image: url('/images/arch-${({ theme }) => (theme.isDark ? 'dark' : 'dark')}.svg'),
+      url('/images/imagem_esquerda.svg'), url('/images/imagem_direita.svg'); */
+    background-image: linear-gradient(
+      rgba(0,0,0,.9),rgba(0,0,0,.6)
+    ),
+    url('/images/fundo.jpg');
+    background-repeat: repeat;
+    background-size: COVER, 866px, 566px;
   }
 `
 

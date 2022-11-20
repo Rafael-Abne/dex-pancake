@@ -1,5 +1,5 @@
 {
-  "name": "Texas Protocol Default List",
+  "name": "Mimos Coin",
   "timestamp": "2021-03-17T09:56:23Z",
   "version": {
     "major": 2,
@@ -22,18 +22,20 @@
     {
       "name": "BUSD",
       "symbol": "BUSD",
-      "address": "0x92aeE552f932Ed7E7422b8B9D259139c72E15C25",
-      "chainId": 97,
+      "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+      "chainId": 56,
       "decimals": 18,
       "logoURI": "https://bscscan.com/token/images/busd_32.png"
     },
+
+
     {
-      "name": "Binance-Peg BUSD Token",
-      "symbol": "BUSD",
-      "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+      "name": "Mimos Coin",
+      "symbol": "MMC",
+      "address": "0x9ceBCBF0677a21f32b41eFaac2Db558aa8682686",
       "chainId": 56,
-      "decimals": 9,
-      "logoURI": "https://bscscan.com/token/images/busd_32.png"
+      "decimals": 8,
+      "logoURI": "https://static.wixstatic.com/media/296764_51bd7f658ad745c8b9ba946bf794b84b~mv2.png/v1/fill/w_43,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/22222.png"
     }
   ]
 }

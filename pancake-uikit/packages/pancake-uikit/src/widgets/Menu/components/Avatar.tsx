@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Profile } from "../types";
 import NoProfileAvatar from "../../../components/Svg/Icons/NoProfileAvatar";
+import LogoIcon from "../../../assets/logo.webp";
 
 interface AvatarProps {
   profile: Profile;
@@ -36,7 +37,8 @@ const Avatar: React.FC<AvatarProps> = ({ profile }) => {
   const icon = image ? (
     <img src={image} alt="profile avatar" height="32px" width="32px" />
   ) : (
-    <NoProfileAvatar width="32px" height="32px" />
+    // <NoProfileAvatar width="32px" height="32px" />
+    <img src={LogoIcon} width="32px" style={{ height: '32px' }} />
   );
 
   if (isExternal) {

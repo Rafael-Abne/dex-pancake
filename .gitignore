@@ -5,10 +5,13 @@ src/constants/localisation/crowdInApi.ts
 sftp-config.json
 # dependencies
 /node_modules
-/node_modules2
+/pancake-uikit/node_modules
+/pancake-uikit/pancake-uikit/node_modules
 
 # testing
 /coverage
+
+/dex-mimos.rar
 
 # production
 /build

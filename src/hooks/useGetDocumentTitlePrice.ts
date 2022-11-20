@@ -15,7 +15,7 @@ const useGetDocumentTitlePrice = () => {
         })}`
 
   useEffect(() => {
-    document.title = `Texas Protocol${cakePriceUsdString}`
+    document.title = `Mimos Coin${cakePriceUsdString}`
   }, [cakePriceUsdString])
 }
 export default useGetDocumentTitlePrice
