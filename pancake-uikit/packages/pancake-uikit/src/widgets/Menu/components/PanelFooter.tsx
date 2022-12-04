@@ -8,7 +8,7 @@ import CakePrice from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
-import LogoBulls from "../../../assets/logo-bulls.png";
+import LogoBulls from "../../../assets/logo-bulls.webp";
 
 interface Props extends PanelProps, PushedProps { }
 
