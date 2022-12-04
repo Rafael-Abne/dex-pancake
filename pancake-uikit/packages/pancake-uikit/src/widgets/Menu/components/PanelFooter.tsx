@@ -8,14 +8,43 @@ import CakePrice from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
+import LogoBulls from "../../../assets/logo-bulls.png";
 
-interface Props extends PanelProps, PushedProps {}
+interface Props extends PanelProps, PushedProps { }
 
 const Container = styled.div`
   flex: none;
   padding: 8px 4px;
   background-color: ${({ theme }) => theme.nav.background};
   border-top: solid 2px rgba(133, 133, 133, 0.1);
+  margin-bottom: 20px;
+  @media (max-width: 768px) {
+    margin-bottom: 100px;
+  }
+`;
+
+const FooterBullsProtocol = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  img{
+    width: 20px;
+    margin-right: 5px;
+  }
+  p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFAB00;
+    font-size: 12px;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    color: #2643c0;
+    margin-top: 5px;
+  }
 `;
 
 const SettingsEntry = styled.div`
@@ -64,6 +93,11 @@ const PanelFooter: React.FC<Props> = ({
         <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
         <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
       </SettingsEntry>
+      <FooterBullsProtocol>
+        <p>
+          Developed by <a target="_blank" href="https://bullsprotocol.com"><img src={LogoBulls} /> Bulls Protocol</a>
+        </p>
+      </FooterBullsProtocol>
     </Container>
   );
 };

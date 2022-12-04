@@ -15,6 +15,11 @@ const config: MenuEntry[] = [
     label: 'Liquidante BRL',
     icon: 'IfoIcon',
     href: '',
+  },
+  {
+    label: 'NFTs',
+    icon: 'NftIcon',
+    href: 'https://mimos.finance/dapp',
   }
 ]
 
